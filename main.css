@@ -1,0 +1,17 @@
+@import "./style_guide/app_color.css";
+@import "./style_guide/app_typography.css";
+:root {
+  --white: #ffffff;
+  --black: "#000000";
+  --grey-50: "#F6F6F7";
+  /* so on */
+}
+
+.appColor {
+  color: var(--white2);
+}
+
+body {
+  font-family: var(--body-font);
+}
+

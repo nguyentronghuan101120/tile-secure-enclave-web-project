@@ -1,0 +1,10 @@
+/* <!--=============== App color ===============--> */
+
+:root {
+  --gray-700: #5c5c5d;
+  --primary-tideBlue-500: #005ce6;
+  --functional-warning-500: #faad14;
+  --functional-success-500: #039855;
+  --functional-error-500: #f04438;
+  --functional-link-500: #1890ff;
+}

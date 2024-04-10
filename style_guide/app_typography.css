@@ -1,0 +1,75 @@
+/* <!--=============== App typography ===============--> */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+:root {
+  --app-font: "Inter";
+
+  --text-s-size: 12px;
+  --text-m-size: 14px;
+  --text-l-size: 16px;
+  --text-xl-size: 16px;
+  --text-button-s-size: 14px;
+  --text-button-l-size: 16px;
+  --text-heading-3-size: 20px;
+  --text-heading-2-size: 24px;
+  --text-heading-1-size: 32px;
+
+  --text-s-height: 16px;
+  --text-m-height: 18px;
+  --text-l-height: 20px;
+  --text-xl-height: 22px;
+  --text-button-s-height: 14px;
+  --text-button-l-height: 16px;
+  --text-heading-3-height: 26px;
+  --text-heading-2-height: 34px;
+  --text-heading-1-height: 38px;
+
+  --italic-font-style: italic;
+  --semiBold-font-weight: 600;
+  --bold-font-weight: bold;
+  --underline-text-decoration:underline;
+  --uppercase-text-transform:uppercase;
+}
+
+.text-s-regular-text-style {
+  font-size: var(--text-s-size);
+  font-family: var(--app-font);
+  height: var(--text-m-height);
+}
+
+.text-s-regular-underline-text-style {
+  font-size: var(--text-s-size);
+  font-family: var(--app-font);
+  text-decoration: var(--underline-text-decoration);
+  height: var(--text-m-height);
+}
+
+.text-s-italic-text-style {
+  font-size: var(--text-s-size);
+  font-family: var(--app-font);
+  height: var(--text-s-height);
+  font-style: var(--italic-font-style);
+}
+
+.text-s-semiBold-text-style {
+  font-size: var(--text-s-size);
+  font-family: var(--app-font);
+  height: var(--text-s-height);
+  font-weight: var(--semiBold-font-weight);
+}
+
+.text-s-bold-text-style {
+  font-size: var(--text-s-size);
+  height: var(--text-s-height);
+  font-family: var(--app-font);
+  font-weight: var(--bold-font-weight);
+}
+
+.text-s-bold-upercase-text-style {
+  font-size: var(--text-s-size);
+  height: var(--text-s-height);
+  font-family: var(--app-font);
+  font-weight: var(--bold-font-weight);
+  text-transform: var(--uppercase-text-transform);
+}
