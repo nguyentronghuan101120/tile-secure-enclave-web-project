@@ -1,0 +1,17 @@
+.well-known
+Jenkin
+sonar-project.properties
+node_modules/
+
+
+.user.ini
+.htaccess
+.htpasswd
+sitemap.xml
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+backup-sql
+sxd

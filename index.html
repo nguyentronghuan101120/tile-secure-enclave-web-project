@@ -1,13 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Document</title>
-
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="main.css" />
+    <script defer src="./components/button/index.js"></script>
+    <script defer src="./components/input/index.js"></script>
+    <script defer src="./components/accordion/index.js"></script>
+    <script defer src="./components/progress-bar/index.js"></script>
+    <script defer src="./components/list-tile/index.js"></script>
+    <script defer src="./components/tooltip/index.js"></script>
   </head>
   <body>
-    <h1 class="text-s-semiBold-text-style">Hello</h1>
+    <!-- <h5>Button</h5>
+    <custom-button disabled="true">
+      <div slot="start-adornment">
+        <img src="./assets/icons/information.svg" />
+      </div>
+      123
+    </custom-button>
+    <custom-button variant="icon-primary">
+      <img src="./assets/icons/information.svg" />
+    </custom-button>
+    <custom-button variant="primary" size="large" processing="true"
+      >123</custom-button
+    >
+    <custom-button disabled="true" variant="secondary">123</custom-button>
+    <custom-button variant="secondary">123</custom-button>
+    <custom-button variant="secondary" size="large" processing="true"
+      >123</custom-button
+    >
+
+   
+
+    <custom-input id="text" type="text" label="Field Name">
+      <div slot="helper">
+        SomeThing
+        <ul class="helper-list">
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+        </ul>
+      </div>
+    </custom-input>
+
+    <!-- <progress-bar
+      count-of-progress="3"
+      current-step="2"
+      content-of-circle="Request;Assemble;Reset"
+    ></progress-bar> -->
+
+    <!-- <list-tile
+      leading-icon-src="./assets/icons/information.svg"
+      label="This is label"
+    ></list-tile>
+
+    <div class="tooltip-container">
+      <custom-tooltip text="This is a tooltip" position="top-left">Top left</custom-tooltip>
+      <custom-tooltip text="This is a tooltip" position="top">Top</custom-tooltip>
+      <custom-tooltip text="This is a tooltip" position="top-right">Top right</custom-tooltip>
+    </div>
+    <div class="tooltip-container">
+      <custom-tooltip text="This is a tooltip" position="left">Left</custom-tooltip>
+      <custom-tooltip text="This is a tooltip" position="right">Right</custom-tooltip>
+    </div>
+    <div class="tooltip-container">
+      <custom-tooltip text="This is a tooltip" position="bottom-left">Bottom left</custom-tooltip>
+      <custom-tooltip text="This is a tooltip" position="bottom">Bottom</custom-tooltip>
+      <custom-tooltip text="This is a tooltip" position="bottom-right">Bottom right</custom-tooltip>
+    </div>
+    <div class="tooltip-container">
+      <custom-tooltip text="This is a tooltip" position="top" trigger="click">Click</custom-tooltip>
+    </div>
   </body>
 </html>

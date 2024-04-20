@@ -28,48 +28,91 @@
   --italic-font-style: italic;
   --semiBold-font-weight: 600;
   --bold-font-weight: bold;
-  --underline-text-decoration:underline;
-  --uppercase-text-transform:uppercase;
+  --underline-text-decoration: underline;
+  --uppercase-text-transform: uppercase;
+
+  --text-color: black;
 }
 
-.text-s-regular-text-style {
+/* Text S */
+.text-s-regular {
   font-size: var(--text-s-size);
-  font-family: var(--app-font);
-  height: var(--text-m-height);
+  height: var(--text-s-height);
+  color: var(--text-color);
 }
 
-.text-s-regular-underline-text-style {
+.text-s-regular-underline {
   font-size: var(--text-s-size);
-  font-family: var(--app-font);
+
   text-decoration: var(--underline-text-decoration);
-  height: var(--text-m-height);
+  height: var(--text-s-height);
+  color: var(--text-color);
 }
 
-.text-s-italic-text-style {
+.text-s-italic {
   font-size: var(--text-s-size);
-  font-family: var(--app-font);
+
   height: var(--text-s-height);
   font-style: var(--italic-font-style);
+  color: var(--text-color);
 }
 
-.text-s-semiBold-text-style {
+.text-s-semiBold {
   font-size: var(--text-s-size);
-  font-family: var(--app-font);
+
   height: var(--text-s-height);
   font-weight: var(--semiBold-font-weight);
+  color: var(--text-color);
 }
 
-.text-s-bold-text-style {
+.text-s-bold {
   font-size: var(--text-s-size);
   height: var(--text-s-height);
-  font-family: var(--app-font);
+
   font-weight: var(--bold-font-weight);
+  color: var(--text-color);
 }
 
-.text-s-bold-upercase-text-style {
+.text-s-bold-upercase {
   font-size: var(--text-s-size);
   height: var(--text-s-height);
-  font-family: var(--app-font);
+
   font-weight: var(--bold-font-weight);
   text-transform: var(--uppercase-text-transform);
+  color: var(--text-color);
+}
+
+/* Text L */
+.text-l-semi-bold {
+  font-size: var(--text-l-size);
+  height: var(--text-l-height);
+  font-weight: var(--semiBold-font-weight);
+  color: var(--text-color);
+}
+
+.text-l-regular {
+  font-size: var(--text-l-size);
+  height: var(--text-l-height);
+  color: var(--text-color);
+}
+
+.text-l-regular-underline {
+  font-size: var(--text-l-size);
+  color: var(--text-color);
+
+  text-decoration: var(--underline-text-decoration);
+  height: var(--text-l-height);
+}
+
+/* Custom color variations */
+.text-color-error-500 {
+  --text-color: var(--error-500);
+}
+
+.text-color-gray-700 {
+  --text-color: var(--gray-700);
+}
+
+.text-color-link-500 {
+  --text-color: var(--link-500);
 }

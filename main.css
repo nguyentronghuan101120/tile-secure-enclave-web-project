@@ -1,17 +1,16 @@
 @import "./style_guide/app_color.css";
 @import "./style_guide/app_typography.css";
-:root {
-  --white: #ffffff;
-  --black: "#000000";
-  --grey-50: "#F6F6F7";
-  /* so on */
+
+.tooltip-container {
+  background-color: var(--gray-100);
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
-.appColor {
-  color: var(--white2);
+:root .helper-list {
+  margin: 0 0 12px 0;
 }
-
-body {
-  font-family: var(--body-font);
-}
-
