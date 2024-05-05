@@ -1,0 +1,40 @@
+@import url("../../main.css");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: var(--app-font);
+}
+
+body {
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.back-button-nav-container {
+  display: flex;
+  display: inline;
+}
+
+.back-button {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.back-button {
+  background-image: url("../../assets/icons/arrow-back-icon.svg");
+
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) saturate(100%) invert(40%) sepia(0%) saturate(1493%)
+    hue-rotate(23deg) brightness(89%) contrast(94%);
+  margin-right: 8px;
+}
+
+.hide {
+  display: none;
+}

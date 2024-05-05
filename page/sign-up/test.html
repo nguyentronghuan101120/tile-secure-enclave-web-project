@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: red;
+        height: 100px;
+        position: relative; /* Necessary for absolute positioning */
+      }
+
+      .text-cover {
+        position: absolute;
+        width: 100px; /* Set width as per your requirement */
+        height: 100%; /* Cover the entire height of the parent container */
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%); /* Center the text cover */
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.5
+        ); /* Semi-transparent white background */
+        z-index: 1; /* Ensure the cover is above the text */
+        cursor: pointer;
+      }
+
+      .container p:hover {
+        color: blue; /* Change the color to your desired hover effect */
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="text-cover">
+        <p>This is text 1</p>
+        <p>this is text 2</p>
+        <p>This is text 3</p>
+      </div>
+      <!-- New div for covering the text -->
+    </div>
+  </body>
+</html>

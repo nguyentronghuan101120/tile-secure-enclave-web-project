@@ -10,16 +10,19 @@
     <script defer src="./components/button/index.js"></script>
     <script defer src="./components/input/index.js"></script>
     <script defer src="./components/accordion/index.js"></script>
+    <script defer src="./components/checkbox/index.js"></script>
     <script defer src="./components/progress-bar/index.js"></script>
-    <script defer src="./components/list-tile/index.js"></script>
-    <script defer src="./components/tooltip/index.js"></script>
+    <script defer src="./components/slider/index.js"></script>
+    <script defer src="./components/slide-item/index.js"></script>
+    <script defer src="./components/toggle/index.js"></script>
   </head>
   <body>
-    <!-- <h5>Button</h5>
+    <custom-toggle></custom-toggle>
+    <custom-checkbox type="checkbox" size="md"></custom-checkbox>
+    <custom-checkbox type="check-circle" size="sm"></custom-checkbox>
+    <custom-checkbox type="radio" size="md"></custom-checkbox>
+    <h5>Button</h5>
     <custom-button disabled="true">
-      <div slot="start-adornment">
-        <img src="./assets/icons/information.svg" />
-      </div>
       123
     </custom-button>
     <custom-button variant="icon-primary">
@@ -33,47 +36,31 @@
     <custom-button variant="secondary" size="large" processing="true"
       >123</custom-button
     >
-
-   
-
+    <h5>Input</h5>
     <custom-input id="text" type="text" label="Field Name">
-      <div slot="helper">
-        SomeThing
-        <ul class="helper-list">
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-        </ul>
-      </div>
+      <div slot="helper">SomeThing</div>
+      <ul>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+      </ul>
     </custom-input>
-
-    <!-- <progress-bar
-      count-of-progress="3"
-      current-step="2"
-      content-of-circle="Request;Assemble;Reset"
-    ></progress-bar> -->
-
-    <!-- <list-tile
-      leading-icon-src="./assets/icons/information.svg"
-      label="This is label"
-    ></list-tile>
-
-    <div class="tooltip-container">
-      <custom-tooltip text="This is a tooltip" position="top-left">Top left</custom-tooltip>
-      <custom-tooltip text="This is a tooltip" position="top">Top</custom-tooltip>
-      <custom-tooltip text="This is a tooltip" position="top-right">Top right</custom-tooltip>
-    </div>
-    <div class="tooltip-container">
-      <custom-tooltip text="This is a tooltip" position="left">Left</custom-tooltip>
-      <custom-tooltip text="This is a tooltip" position="right">Right</custom-tooltip>
-    </div>
-    <div class="tooltip-container">
-      <custom-tooltip text="This is a tooltip" position="bottom-left">Bottom left</custom-tooltip>
-      <custom-tooltip text="This is a tooltip" position="bottom">Bottom</custom-tooltip>
-      <custom-tooltip text="This is a tooltip" position="bottom-right">Bottom right</custom-tooltip>
-    </div>
-    <div class="tooltip-container">
-      <custom-tooltip text="This is a tooltip" position="top" trigger="click">Click</custom-tooltip>
-    </div>
+    <custom-checkbox></custom-checkbox>
+    <progress-bar
+      count-of-progress="4"
+      current-step="3"
+      content-of-circle="hello;hello2;hello3;hello4;"
+    ></progress-bar>
+    <custom-slider>
+      <slide-item>1</slide-item>
+      <slide-item>
+        <div>2</div>
+      </slide-item>
+      <slide-item><div>3</div></slide-item>
+      <slide-item><div>3</div></slide-item>
+      <slide-item><div>3</div></slide-item>
+      <slide-item><div>3</div></slide-item>
+      <slide-item><div>3</div></slide-item>
+    </custom-slider>
   </body>
 </html>

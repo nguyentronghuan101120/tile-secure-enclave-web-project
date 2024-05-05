@@ -1,0 +1,33 @@
+@import url("../../main.css");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: var(--app-font);
+}
+
+body,
+html {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.already-clicked-img {
+  background-image: url("../../assets/icons/already-clicked.svg");
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.left {
+  margin-right: 16px;
+  max-width: 50%;
+}
+
+.right {
+  max-width: 50%;
+}

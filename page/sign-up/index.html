@@ -1,11 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Signup</title>
-</head>
-<body>
-    <h1></h1>
-</body>
+    <script defer src="../../components/alert/index.js"></script>
+    <script defer src="../../components/input/index.js"></script>
+    <script defer src="../../components/sizedbox/index.js"></script>
+    <script defer src="../../components/secure-by/index.js"></script>
+    <script defer src="../../components/tooltip/index.js"></script>
+    <script defer src="add-email-address-field.js"></script>
+    <script src="expand-settings-option.js"></script>
+    <script defer src="router.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <p class="text-heading-1 display-flex justify-center">
+        This is a Heading
+      </p>
+
+      <sized-box height="8px"></sized-box>
+
+      <div class="display-flex justify-center">
+        <p class="text-l-regular">
+          Already an user?
+          <a
+            href="#"
+            class="text-l-regular"
+            style="margin-right: 8px"
+            id="login-nav"
+            >Login</a
+          >
+        </p>
+        <custom-tooltip text="This is tooltip">
+          <img
+            class="information-img"
+            src="../../assets/icons/information_circle_contained.svg"
+          />
+        </custom-tooltip>
+      </div>
+
+      <sized-box height="32px"></sized-box>
+
+      <custom-alert
+        label="This is label"
+        content-message="This is content message"
+        type="error"
+      ></custom-alert>
+
+      <sized-box height="32px"></sized-box>
+
+      <custom-input id="text" type="text" label="Field Name"></custom-input>
+
+      <sized-box height="16px"></sized-box>
+
+      <custom-input id="text" type="password" label="Password"></custom-input>
+
+      <sized-box height="16px"></sized-box>
+
+      <div class="display-flex justify-end">
+        <a href="#" class="text-l-regular-underline">Forgot password</a>
+      </div>
+
+      <sized-box height="16px"></sized-box>
+
+      <div id="email-container">
+        <div class="display-flex align-center">
+          <div class="email-address-field">
+            <custom-input
+              id="text"
+              type="text"
+              label="Email Address 1"
+            ></custom-input>
+          </div>
+          <div style="width: 34px; height: 34px; margin: 8px 0px 0 8px"></div>
+        </div>
+        <sized-box height="16px"></sized-box>
+      </div>
+
+      <div class="display-flex justify-center align-center">
+        <div class="divider"></div>
+
+        <div
+          class="display-flex justify-center align-center hover-effect"
+          id="add-email-button"
+        >
+          <div class="add-email-button">
+            <div class="child"></div>
+          </div>
+
+          <p class="text-button-s container">Add email address</p>
+        </div>
+
+        <div class="divider"></div>
+      </div>
+
+      <sized-box height="16px"></sized-box>
+
+      <div class="display-flex justify-center align-center">
+        <p class="text-l-regular margin-right-4">
+          Hint text to help the user understand the purpose of the multiple
+          email field
+        </p>
+        <custom-tooltip text="This is tooltip">
+          <img
+            class="information-img"
+            src="../../assets/icons/information_circle_contained.svg"
+          />
+        </custom-tooltip>
+      </div>
+
+      <sized-box height="32px"></sized-box>
+
+      <div class="divider"></div>
+
+      <sized-box height="32px"></sized-box>
+
+      <div>
+        <div class="settings-option-container">
+          <div class="child" id="settings-option">
+            <div class="settings-header-img"></div>
+            <p class="text-l-semi-bold">Settings</p>
+            <div class="arrow-down-img"></div>
+          </div>
+        </div>
+
+        <sized-box height="32px"></sized-box>
+
+        <div id="settings-option-content">
+          <p class="text-l-italic">
+            This section offers advanced features to give you control over how
+            your account identity, authentication and authority are managed.
+          </p>
+
+          <sized-box height="16px"></sized-box>
+
+          <div class="display-flex hover-effect" id="master-key-nav">
+            <div class="manage-master-key-icon"></div>
+            <p class="text-l-semi-bold margin-right-8 margin-left-8">
+              Manage my Master Key
+            </p>
+            <custom-tooltip text="This is tooltip">
+              <img
+                class="information-img"
+                src="../../assets/icons/information_circle_contained.svg"
+              />
+            </custom-tooltip>
+          </div>
+
+          <sized-box height="16px"></sized-box>
+
+          <div class="display-flex hover-effect" id="customer-key-id">
+            <div class="manage-customer-key-icon"></div>
+            <p class="text-l-semi-bold margin-right-8 margin-left-8">
+              Manage my Customer Key
+            </p>
+            <custom-tooltip text="This is tooltip">
+              <img
+                class="information-img"
+                src="../../assets/icons/information_circle_contained.svg"
+              />
+            </custom-tooltip>
+          </div>
+        </div>
+
+        <sized-box height="32px"></sized-box>
+
+        <secure-by></secure-by>
+      </div>
+    </div>
+  </body>
 </html>

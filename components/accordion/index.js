@@ -1,12 +1,12 @@
 class CustomAccordion extends HTMLElement {
   static get observedAttributes() {
-    return ['title', 'content', 'src'];
+    return ["title", "content", "src"];
   }
 
   constructor() {
     super();
 
-    const template = document.createElement('template');
+    const template = document.createElement("template");
     template.innerHTML = `
     <style>
       .custom-faq {
@@ -54,11 +54,15 @@ class CustomAccordion extends HTMLElement {
         margin: 0;
         padding: 0 16px 16px 16px;
         box-sizing: border-box;
-        font-family: var(--app-font)
-        color: var(--gray-900);
+        font-family: var(--app-font);
+        color: var(--gray-700);
         font-size: var(--text-l-size);
         font-weight: 400;
         line-height: 20px;
+      }
+
+      .content{
+        color: var(--gray-700)
       }
 
       .custom-faq .body .img-holder {
@@ -66,6 +70,7 @@ class CustomAccordion extends HTMLElement {
         width: 100%;
         overflow: hidden;
         box-sizing: border-box;
+        border-radius: 4px;
       }
 
       .custom-faq .body .img-holder .img {
@@ -73,6 +78,8 @@ class CustomAccordion extends HTMLElement {
         max-heigt: 100%;
         display: block;
         margin: auto;
+        overflow: hidden;
+        border-radius: 4px;
       }
     
       .custom-faq.active .header .arrow-icon{
@@ -104,58 +111,64 @@ class CustomAccordion extends HTMLElement {
       </div>
     `;
 
-    this._shadowRoot = this.attachShadow({ mode: 'open' });
+    this._shadowRoot = this.attachShadow({ mode: "open" });
     this._shadowRoot.appendChild(template.content.cloneNode(true));
 
-    this.container = this._shadowRoot.querySelector('.custom-faq');
-    
-    this.faqHeader = this._shadowRoot.querySelector('.custom-faq .header');
-    this.faqTitle = this._shadowRoot.querySelector('.custom-faq .header .title')
-    this.arrowIcon = this._shadowRoot.querySelector('.arrow-icon');
-    
-    this.faqBody = this._shadowRoot.querySelector('.custom-faq .body');
-    this.faqContent = this._shadowRoot.querySelector('.custom-faq .body .content');
-    this.faqImgHolder = this._shadowRoot.querySelector('.custom-faq .body .img-holder');
+    this.container = this._shadowRoot.querySelector(".custom-faq");
 
-    if (this.getAttribute('src')) {
-      const img = document.createElement('img');
-      img.setAttribute('src', this.getAttribute('src'));
-      img.classList.add('img');
+    this.faqHeader = this._shadowRoot.querySelector(".custom-faq .header");
+    this.faqTitle = this._shadowRoot.querySelector(
+      ".custom-faq .header .title"
+    );
+    this.arrowIcon = this._shadowRoot.querySelector(".arrow-icon");
+
+    this.faqBody = this._shadowRoot.querySelector(".custom-faq .body");
+    this.faqContent = this._shadowRoot.querySelector(
+      ".custom-faq .body .content"
+    );
+    this.faqImgHolder = this._shadowRoot.querySelector(
+      ".custom-faq .body .img-holder"
+    );
+
+    if (this.getAttribute("src")) {
+      const img = document.createElement("img");
+      img.setAttribute("src", this.getAttribute("src"));
+      img.classList.add("img");
       this.faqImgHolder.appendChild(img);
     }
   }
 
   connectedCallback() {
-    this.faqHeader.addEventListener('click', this.toggleActive.bind(this));
+    this.faqHeader.addEventListener("click", this.toggleActive.bind(this));
     this.render();
   }
 
   disconnectedCallback() {
-    this.faqHeader.removeEventListener('click', this.toggleActive.bind(this));
+    this.faqHeader.removeEventListener("click", this.toggleActive.bind(this));
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
     if (oldValue !== newValue) {
-      if (name === 'id') {
-        this.input.setAttribute('id', newValue);
+      if (name === "id") {
+        this.input.setAttribute("id", newValue);
       }
       this.render();
     }
   }
 
   toggleActive() {
-    if (this.container.classList.contains('active')) {
-      this.container.classList.remove('active');
+    if (this.container.classList.contains("active")) {
+      this.container.classList.remove("active");
     } else {
-      this.container.classList.add('active');
+      this.container.classList.add("active");
     }
-    this.arrowIcon.toggleAttribute('active');
+    this.arrowIcon.toggleAttribute("active");
   }
 
   render() {
-    this.faqTitle.textContent = this.getAttribute('title') || '';
-    this.faqContent.textContent = this.getAttribute('content') || '';
+    this.faqTitle.textContent = this.getAttribute("title") || "";
+    this.faqContent.textContent = this.getAttribute("content") || "";
   }
 }
 
-customElements.define('custom-accordion', CustomAccordion);
+customElements.define("custom-accordion", CustomAccordion);

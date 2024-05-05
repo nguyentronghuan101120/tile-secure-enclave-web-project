@@ -17,6 +17,8 @@ const tooltipContent = `
           z-index: 1;
           opacity: 0;
           transition: opacity 0.3s;
+          box-shadow: 0px 4px 6px -2px #10182808;
+          box-shadow: 0px 12px 16px -4px #10182814;
         }
         
         .tooltip[trigger="hover"]:hover .tooltip-container {
@@ -27,6 +29,7 @@ const tooltipContent = `
         .tooltip .tooltip-title {
           color: var(---gray-700);
           font-size: var(--text-m-size);
+          font-family: var(--app-font);
         }
         
         /* Position styles */

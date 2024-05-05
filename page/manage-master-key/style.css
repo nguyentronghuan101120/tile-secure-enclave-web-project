@@ -1,0 +1,63 @@
+@import url("../../main.css");
+
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: var(--app-font);
+}
+
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.back-button,
+.manage-master-key-icon,
+.manage-master-key-icon,
+.information-icon,
+.tide-logo-icon {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.back-button {
+  background-image: url("../../assets/icons/arrow-back-icon.svg");
+
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) saturate(100%) invert(40%) sepia(0%) saturate(1493%)
+    hue-rotate(23deg) brightness(89%) contrast(94%);
+  margin-right: 8px;
+}
+
+.manage-master-key-icon {
+  background-image: url("../../assets/icons/manage-master-key-icon.svg");
+
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) saturate(100%) invert(43%) sepia(46%) saturate(3522%)
+    hue-rotate(192deg) brightness(102%) contrast(101%);
+  margin-right: 8px;
+}
+
+.information-icon {
+  background-image: url("../../assets/icons/information-icon.svg");
+
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) saturate(100%) invert(67%) sepia(0%) saturate(387%)
+    hue-rotate(291deg) brightness(96%) contrast(94%);
+  margin-left: 8px;
+}
+
+.tide-logo-icon {
+  background-image: url("../../assets/icons/tide-logo-icon.svg");
+
+  width: 57px;
+  height: 24px;
+  margin-left: 8px;
+}

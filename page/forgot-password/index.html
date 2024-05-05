@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Forgot Password</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../main.css" />
+    <script defer src="../../components/progress-bar/index.js"></script>
+    <script defer src="../../components/tab-toggle/index.js"></script>
+    <script defer src="../../components/accordion/index.js"></script>
+    <script defer src="../../components/tooltip/index.js"></script>
+    <script defer src="../../components/numberic-label/index.js"></script>
+    <script defer src="./forgot-password.js"></script>
+  </head>
+  <body>
+    <main class="forgot-password">
+      <div class="title">
+        <h1>Assembly recovery codes</h1>
+        <p>Haven't received your fragments? <span>Resend</span></p>
+      </div>
+
+      <progress-bar
+        count-of-progress="3"
+        current-step="2"
+        content-of-circle="Request;Assemble;Reset"
+      ></progress-bar>
+
+      <div class="hint-container">
+        <div class="icon"></div>
+        <div class="content">
+          <h3>Keep this page open for next steps!</h3>
+          <ul>
+            <li><p>20 emails have been sent, each with a unique recovery link.</p></li>
+            <li><p>Click or scan any 14 links to enable password reset.</p></li>
+            <li><p>If you provided more than one recovery email, then check all relevant inboxes.</p></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="separator"></div>
+
+      <div class="recover-pass">
+        <h3>Assemble your recovery codes by</h3>
+
+        <custom-tab-toggle
+          content1="Click the recovery links in your email"
+          src1="../../assets/icons/mail2.svg"
+          content2="Use your mobile to quick scan code"
+          src2="../../assets/icons/scan.svg"
+          state="state1"
+        ></custom-tab-toggle>
+
+        <div class="recovery-email-links-container">
+          <div class="img-container"></div>
+          <div class="content">
+            <p class="track-text">Track your progress here</p>
+            <div class="list">
+              <div class="left-list">
+              </div>
+              <div class="right-list">
+              </div>
+            </div>      
+          </div>
+        </div>
+  
+        <div class="qr-code-container hidden">
+          <div class="img-container">
+            <img src="../../assets/icons/qr.svg" alt="qr"/>
+          </div>
+          <a class="text-m-regular" href="http://orkurl.co/recovery">Visit: http://orkurl.co/recovery</a>
+        </div>
+
+      </div>
+
+      <div class="separator"></div>
+
+      <div class="faq">
+        <h2>FAQ</h2>
+
+        <div class="accordions">
+          <custom-accordion
+            title="This is a question"
+            content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, autem! Architecto dicta quisquam ut impedit officiis quis consequatur sapiente ipsum. Maxime a accusamus obcaecati similique, saepe explicabo quas dolore eligendi dolorem dolores impedit ipsa repellat, ipsum aspernatur perferendis ut totam voluptates reiciendis quibusdam debitis sequi porro rem aliquam. Quas, provident."
+            src="../../assets/background.jpg"
+            ></custom-accordion>
+          <custom-accordion
+            title="This is a question"
+            content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, autem! Architecto dicta quisquam ut impedit officiis quis consequatur sapiente ipsum. Maxime a accusamus obcaecati similique, saepe explicabo quas dolore eligendi dolorem dolores impedit ipsa repellat, ipsum aspernatur perferendis ut totam voluptates reiciendis quibusdam debitis sequi porro rem aliquam. Quas, provident."
+          ></custom-accordion>
+          <custom-accordion
+            title="This is a question"
+            content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, autem! Architecto dicta quisquam ut impedit officiis quis consequatur sapiente ipsum. Maxime a accusamus obcaecati similique, saepe explicabo quas dolore eligendi dolorem dolores impedit ipsa repellat, ipsum aspernatur perferendis ut totam voluptates reiciendis quibusdam debitis sequi porro rem aliquam. Quas, provident."
+          ></custom-accordion>
+          <custom-accordion
+            title="This is a question"
+            content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, autem! Architecto dicta quisquam ut impedit officiis quis consequatur sapiente ipsum. Maxime a accusamus obcaecati similique, saepe explicabo quas dolore eligendi dolorem dolores impedit ipsa repellat, ipsum aspernatur perferendis ut totam voluptates reiciendis quibusdam debitis sequi porro rem aliquam. Quas, provident."
+          ></custom-accordion>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>Secured by</p>
+        <img src="../../assets/icons/tide-logo.svg" alt="tide-logo">
+        <custom-tooltip text="Lorem Lorem Lorem">
+          <img class="tooltip-icon" src="../../assets/icons/information_circle_contained.svg" alt="tooltip">
+        </custom-tooltip>
+      </div>
+      
+    </main>
+  </body>
+</html>

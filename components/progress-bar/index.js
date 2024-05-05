@@ -1,4 +1,4 @@
-/// NOTE: <progress-bar count-of-progress="4" current-step="3" content-of-circle="hello;hello2;hello3;hello4;" ></progress-bar>
+/// NOTE: <progress-bar current-step="3" content-of-circle="hello;hello2;hello3;hello4;" ></progress-bar>
 
 const progressBarTemplate = `
 <style>
@@ -33,7 +33,7 @@ body {
 .steps .circle {
   height: 32px;
   width: 32px;
-  background: var(--primary-50);
+  background: var(--gray-50);
   border: 2px solid var(--gray-200);
   border-radius: 50%;
   display: flex;
@@ -46,7 +46,7 @@ body {
 
 .steps .circle.activating {
   transition-delay: 100ms;
-  border: 4px solid var(--gray-100);
+  border: 4px solid var(--primary-50);
   background-color: var(--primary-500);
   color: var(--white);
 }
@@ -54,7 +54,7 @@ body {
 .steps .circle.activated {
   transition-delay: 100ms;
   border: 2px solid var(--primary-500);
-  background-color: var(--gray-100);
+  background-color: var(--primary-50);
   color: var(--primary-500);
 }
 
@@ -63,8 +63,7 @@ body {
   height: 2px;
   width: 100%;
   background: var(--gray-100);
-  z-index: -1;
-  top: 35px;
+  top: 15px;
 }
 
 .progress-bar .indicator {
@@ -81,7 +80,8 @@ body {
   
   justify-content: center; /* Align items (circles) vertically at the center */
   width: 100px;
-  height: 100px;
+  z-index: 1;
+
   word-wrap: break-word;
 }
 
@@ -140,13 +140,14 @@ class ProgressBar extends HTMLElement {
   }
 
   render() {
-    const countOfProgress = this.getAttribute("count-of-progress") || 0;
     const currentStep = this.getAttribute("current-step") || 0;
     const contentOfCircleString = this.getAttribute("content-of-circle");
     const stepsContainer = this._shadowRoot.querySelector(".steps");
     const progressBar = this._shadowRoot.querySelector(".indicator");
 
-    for (let i = 1; i <= countOfProgress; i++) {
+    const listConentOfCircle = contentOfCircleString.split(";");
+
+    for (let i = 1; i <= listConentOfCircle.length; i++) {
       const stepChildContainer = document.createElement("div");
       const circle = document.createElement("span");
       const contentOfCircle = document.createElement("p");
@@ -169,12 +170,10 @@ class ProgressBar extends HTMLElement {
         contentOfCircle.classList.add("activated");
       }
 
-      if (i === parseInt(countOfProgress)) {
+      if (i === parseInt(listConentOfCircle.length)) {
         stepChildContainer.classList.remove("align-items-center");
         stepChildContainer.classList.add("align-items-end");
       }
-
-      const listConentOfCircle = contentOfCircleString.split(";");
 
       circle.textContent = i;
       contentOfCircle.textContent = listConentOfCircle[i - 1];

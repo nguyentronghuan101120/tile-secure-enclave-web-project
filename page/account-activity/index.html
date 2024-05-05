@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="../../components/list-tile/index.js"></script>
+    <script defer src="../../components/secure-by/index.js"></script>
+    <script defer src="../../components/activity/index.js"></script>
+    <script defer src="index.js"></script>
+    <script defer src="router.js"></script>
+  </head>
+  <body>
+    <div class="card">
+      <div
+        class="display-flex hover-effect"
+        id="back-button-nav"
+        style="width: 60px"
+      >
+        <div class="back-button"></div>
+        <p class="text-l-regular-underline text-color-gray-700">Back</p>
+      </div>
+
+      <div style="height: 16px"></div>
+
+      <p class="text-heading-h1 display-flex align-center justify-center">
+        Account activity
+      </p>
+
+      <div style="height: 16px"></div>
+
+      <div id="activity-container">
+        <activity-tile
+          src="../../assets/icons/person-icon.svg"
+          title="Login"
+          content="Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum. Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum."
+        ></activity-tile>
+
+        <activity-tile
+          src="../../assets/icons/decryption.svg"
+          title="Decryption"
+          content="Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum. Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum."
+        ></activity-tile>
+
+        <activity-tile
+          src="../../assets/icons/logout.svg"
+          title="Logout"
+          content="Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum. Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum."
+        ></activity-tile>
+
+        <activity-tile
+          src="../../assets/icons/person-icon.svg"
+          title="This is label"
+          content="Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum. Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum."
+        ></activity-tile>
+
+        <activity-tile
+          src="../../assets/icons/login-failed.svg"
+          title="Login Failed"
+          content="Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum. Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum."
+        ></activity-tile>
+
+        <activity-tile
+          src="../../assets/icons/person-icon.svg"
+          title="Login"
+          content="Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum. Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum."
+        ></activity-tile>
+
+        <activity-tile
+          src="../../assets/icons/decryption.svg"
+          title="Decryption"
+          content="Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum. Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum."
+        ></activity-tile>
+
+        <activity-tile
+          src="../../assets/icons/logout.svg"
+          title="Logout"
+          content="Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum. Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum."
+        ></activity-tile>
+
+        <activity-tile
+          src="../../assets/icons/person-icon.svg"
+          title="This is label"
+          content="Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum. Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum."
+        ></activity-tile>
+
+        <activity-tile
+          src="../../assets/icons/login-failed.svg"
+          title="Login Failed"
+          content="Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum. Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum."
+        ></activity-tile>
+
+        <activity-tile
+          src="../../assets/icons/person-icon.svg"
+          title="Login"
+          content="Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum. Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum."
+        ></activity-tile>
+
+        <activity-tile
+          src="../../assets/icons/decryption.svg"
+          title="Decryption"
+          content="Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum. Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum."
+        ></activity-tile>
+
+        <activity-tile
+          src="../../assets/icons/logout.svg"
+          title="Logout"
+          content="Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum. Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum."
+        ></activity-tile>
+
+        <activity-tile
+          src="../../assets/icons/person-icon.svg"
+          title="This is label"
+          content="Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum. Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum."
+        ></activity-tile>
+
+        <activity-tile
+          src="../../assets/icons/login-failed.svg"
+          title="Login Failed"
+          content="Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum. Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum."
+        ></activity-tile>
+
+        <activity-tile
+          src="../../assets/icons/person-icon.svg"
+          title="Login"
+          content="Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum. Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum."
+        ></activity-tile>
+
+        <activity-tile
+          src="../../assets/icons/decryption.svg"
+          title="Decryption"
+          content="Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum. Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum."
+        ></activity-tile>
+
+        <activity-tile
+          src="../../assets/icons/logout.svg"
+          title="Logout"
+          content="Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum. Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum."
+        ></activity-tile>
+
+        <activity-tile
+          src="../../assets/icons/person-icon.svg"
+          title="This is label"
+          content="Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum. Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum."
+        ></activity-tile>
+
+        <activity-tile
+          src="../../assets/icons/login-failed.svg"
+          title="Login Failed"
+          content="Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum. Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum."
+        ></activity-tile>
+      </div>
+
+      <a href="#" id="show-more-btn">Show More</a>
+
+      <div style="height: 32px"></div>
+      <secure-by></secure-by>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var activityTiles = document.querySelectorAll("activity-tile");
+
+        window.addEventListener("click", function (event) {
+          activityTiles.forEach((tile) => {
+            var shadowRootElement = tile.shadowRoot;
+
+            var dropdownContent =
+              shadowRootElement.querySelector(".dropdown-content");
+
+            const menuIcon = shadowRootElement.querySelector(".menu-icon");
+
+            // Get the bounding rectangle for the menu icon and dropdown content
+            var menuIconRect = menuIcon.getBoundingClientRect();
+            var dropdownContentRect = dropdownContent.getBoundingClientRect();
+
+            // Check if the click coordinates are within the bounds of the menu icon or dropdown content
+            var clickX = event.clientX;
+            var clickY = event.clientY;
+
+            if (
+              clickX >= menuIconRect.left &&
+              clickX <= menuIconRect.right &&
+              clickY >= menuIconRect.top &&
+              clickY <= menuIconRect.bottom
+            ) {
+              return;
+            }
+
+            if (
+              clickX >= dropdownContentRect.left &&
+              clickX <= dropdownContentRect.right &&
+              clickY >= dropdownContentRect.top &&
+              clickY <= dropdownContentRect.bottom
+            ) {
+              dropdownContent.classList.remove("show");
+
+              return;
+            }
+            dropdownContent.classList.remove("show");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

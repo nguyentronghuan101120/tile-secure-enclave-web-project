@@ -15,68 +15,49 @@
   --text-heading-2-size: 24px;
   --text-heading-1-size: 32px;
 
-  --text-s-height: 16px;
-  --text-m-height: 18px;
-  --text-l-height: 20px;
-  --text-xl-height: 22px;
-  --text-button-s-height: 14px;
-  --text-button-l-height: 16px;
-  --text-heading-3-height: 26px;
-  --text-heading-2-height: 34px;
-  --text-heading-1-height: 38px;
-
   --italic-font-style: italic;
+  --regular-font-weight: 400;
   --semiBold-font-weight: 600;
+  --heading-font-weight: 700;
   --bold-font-weight: bold;
   --underline-text-decoration: underline;
   --uppercase-text-transform: uppercase;
 
-  --text-color: black;
+  --text-color: var(--gray-900);
 }
 
 /* Text S */
 .text-s-regular {
   font-size: var(--text-s-size);
-  height: var(--text-s-height);
   color: var(--text-color);
 }
 
 .text-s-regular-underline {
   font-size: var(--text-s-size);
-
   text-decoration: var(--underline-text-decoration);
-  height: var(--text-s-height);
   color: var(--text-color);
 }
 
 .text-s-italic {
   font-size: var(--text-s-size);
-
-  height: var(--text-s-height);
   font-style: var(--italic-font-style);
   color: var(--text-color);
 }
 
 .text-s-semiBold {
   font-size: var(--text-s-size);
-
-  height: var(--text-s-height);
   font-weight: var(--semiBold-font-weight);
   color: var(--text-color);
 }
 
 .text-s-bold {
   font-size: var(--text-s-size);
-  height: var(--text-s-height);
-
   font-weight: var(--bold-font-weight);
   color: var(--text-color);
 }
 
 .text-s-bold-upercase {
   font-size: var(--text-s-size);
-  height: var(--text-s-height);
-
   font-weight: var(--bold-font-weight);
   text-transform: var(--uppercase-text-transform);
   color: var(--text-color);
@@ -85,23 +66,67 @@
 /* Text L */
 .text-l-semi-bold {
   font-size: var(--text-l-size);
-  height: var(--text-l-height);
   font-weight: var(--semiBold-font-weight);
   color: var(--text-color);
 }
 
 .text-l-regular {
   font-size: var(--text-l-size);
-  height: var(--text-l-height);
   color: var(--text-color);
+  font-weight: var(--regular-font-weight);
 }
 
 .text-l-regular-underline {
   font-size: var(--text-l-size);
   color: var(--text-color);
-
+  font-weight: var(--regular-font-weight);
   text-decoration: var(--underline-text-decoration);
-  height: var(--text-l-height);
+}
+
+.text-heading-1 {
+  font-size: var(--text-heading-1-size);
+  color: var(--text-color);
+  font-weight: var(--heading-font-weight);
+}
+
+.text-button-s {
+  font-size: var(--text-button-s-size);
+  color: var(--text-color);
+}
+
+.text-l-italic {
+  font-size: var(--text-l-size);
+  color: var(--text-color);
+  font-style: var(--italic-font-style);
+}
+
+.text-heading-h2 {
+  font-size: var(--text-heading-2-size);
+  color: var(--text-color);
+  font-weight: var(--heading-font-weight);
+}
+
+.text-heading-h1 {
+  font-size: var(--text-heading-1-size);
+  color: var(--text-color);
+  font-weight: var(--heading-font-weight);
+}
+
+.text-m-regular {
+  font-size: var(--text-m-size);
+  color: var(--text-color);
+}
+
+.text-xl-semi-bold {
+  font-size: var(--text-xl-size);
+  font-weight: var(--semiBold-font-weight);
+  color: var(--text-color);
+}
+
+.text-heading-h3 {
+  font-size: var(--text-heading-3-size);
+  color: var(--text-color);
+  font-weight: var(--heading-font-weight);
 }
 
 /* Custom color variations */
@@ -115,4 +140,8 @@
 
 .text-color-link-500 {
   --text-color: var(--link-500);
+}
+
+.text-color-gray-900 {
+  --text-color: var(--gray-900);
 }

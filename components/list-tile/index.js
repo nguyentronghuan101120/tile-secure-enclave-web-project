@@ -15,6 +15,9 @@ const listTileTemplate = `
         height: 50px;
         justify-content: start;
         border-radius: 8px;
+        padding-left: 16px;
+        padding-right: 16px;
+        cursor: pointer;
       }
 
       .container:hover {
@@ -30,16 +33,14 @@ const listTileTemplate = `
         height: 24px;
         background-repeat: no-repeat ;
         border-radius: 50%;
-        margin-top: 8px;
+        margin-right: 8px
       }
 
       .label {
-        margin-left: 4px;
         font-size: var(--text-xl-size);
         height: var(--text-xl-height);
         font-weight: var(--semiBold-font-weight);
         color: var(--text-color);
-        margin-top: 5px;
         flex-grow: 1;
         white-space: nowrap;
         overflow: hidden;
@@ -51,11 +52,16 @@ const listTileTemplate = `
         background-image: url("../../assets/icons/arrow-right.svg");
         width: 18px;
         height: 20px;
-        margin-left: 8px;
       }
 
       .container:active .label {
         color: var(--primary-500);
+      }
+
+      .container:active .leading-icon {
+        /* Define styles for active state */
+        /* For example, change background color */
+        filter: brightness(0) saturate(100%) invert(22%) sepia(83%) saturate(3810%) hue-rotate(210deg) brightness(93%) contrast(103%);
       }
     </style>
 

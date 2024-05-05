@@ -1,6 +1,7 @@
+
 class CustomInput extends HTMLElement {
   static get observedAttributes() {
-    return ["type", "id", "label", "disabled", "background-color"];
+    return ["type", "id", "label", "disabled", "background-color", "tt-text", "tt-position"];
   }
 
   constructor() {
@@ -33,11 +34,7 @@ class CustomInput extends HTMLElement {
           padding: 0 4px;
           width: 16px;
           height: 16px;
-          fill: var(--gray-400);
-        }
-
-        .custom-input .labelline .information-icon path{
-          fill: var(--gray-400);
+          filter: invert(79%) sepia(5%) saturate(44%) hue-rotate(202deg) brightness(83%) contrast(81%);
         }
         
         .custom-input .labelline .label {
@@ -59,7 +56,10 @@ class CustomInput extends HTMLElement {
           background: transparent;
           box-sizing: border-box;
           font-family: var(--app-font);
-        
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 20px;
+          color: var(--gray-900);
         }
         
         .custom-input.active .labelline{
@@ -82,6 +82,7 @@ class CustomInput extends HTMLElement {
           height: var(--text-s-height);
           font-weight: var(--semiBold-font-weight);
           font-family: var(--app-font);
+          padding-left: 0;
         }
         
         .custom-input.inactive {
@@ -181,7 +182,7 @@ class CustomInput extends HTMLElement {
       <div>
         <div class="custom-input">
           <div class="labelline">
-            <img class="information-icon" src="../../assets/icons/information_circle_contained.svg" alt="information-icon">
+            <div class="tooltip-container"></div>
             <p class="label"></p>
           </div>
           <input>
@@ -199,6 +200,21 @@ class CustomInput extends HTMLElement {
 
     this.labelline = this._shadowRoot.querySelector(".labelline");
     this.informationIcon = this._shadowRoot.querySelector(".information-icon");
+    
+    this.tooltipContainer = this._shadowRoot.querySelector(".labelline .tooltip-container");
+    const tooltip = document.createElement('custom-tooltip');
+    tooltip.setAttribute('text', this.getAttribute('tt-text'));
+    tooltip.setAttribute('position', this.getAttribute('tt-position'));
+    
+    const img = document.createElement('img');
+    img.setAttribute('src', '../../assets/icons/information_circle_contained.svg');
+    img.setAttribute('alt', 'information-icon');
+    img.classList.add('information-icon');
+    tooltip.appendChild(img);
+
+    this.tooltipContainer.appendChild(tooltip)
+
+
     this.label = this._shadowRoot.querySelector(".label");
 
     this.input = this._shadowRoot.querySelector("input");
@@ -213,6 +229,7 @@ class CustomInput extends HTMLElement {
 
   connectedCallback() {
     this.input.addEventListener("click", this.handleInputClick.bind(this));
+    this.label.addEventListener("click", this.handleInputClick.bind(this));
     document.addEventListener("click", this.handleOutsideClick.bind(this));
     this.eyeClosedIcon.addEventListener(
       "click",
@@ -227,6 +244,7 @@ class CustomInput extends HTMLElement {
 
   disconnectedCallback() {
     this.input.removeEventListener("click", this.handleInputClick.bind(this));
+    this.label.removeEventListener("click", this.handleInputClick.bind(this));
     document.removeEventListener("click", this.handleOutsideClick.bind(this));
     this.eyeClosedIcon.addEventListener(
       "click",
@@ -264,6 +282,8 @@ class CustomInput extends HTMLElement {
     } else {
       this.labelline.style.backgroundColor = "white";
     }
+
+    this.input.focus()
   }
 
   handleOutsideClick(event) {
@@ -313,10 +333,10 @@ class CustomInput extends HTMLElement {
     }
 
     if (this.hasAttribute("background-color")) {
-      this.informationIcon.style.backgroundColor =
+      this.tooltipContainer.style.backgroundColor =
         this.getAttribute("background-color");
     } else {
-      this.informationIcon.style.backgroundColor = "white";
+      this.tooltipContainer.style.backgroundColor = "white";
     }
 
     if (this.hasAttribute("disabled")) {

@@ -24,10 +24,6 @@ const templateContent = `
   padding: 16px 16px 0 0;
 }
 
-.closebtn-error-filter {
-  filter: invert(58%) sepia(75%) saturate(2215%) hue-rotate(349deg)
-    brightness(98%) contrast(92%);
-}
 
 .closebtn-success-filter {
   filter: invert(34%) sepia(91%) saturate(1179%) hue-rotate(127deg) brightness(93%) contrast(98%);
@@ -146,6 +142,9 @@ const templateContent = `
   display: none;
 }
 
+a{
+  margin-right: 8px;
+}
 
 </style>
 
@@ -216,7 +215,6 @@ class CustomAlert extends HTMLElement {
     switch (type) {
       case "error":
         this.icon.classList.add("error-icon");
-        this.closeBtn.classList.add("closebtn-error-filter");
         this.labelText.classList.add("label-error");
         this.type.classList.add("error-background");
         break;

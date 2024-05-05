@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="../../components/secure-by/index.js"></script>
+    <script defer src="../../components/numberic-label/index.js"></script>
+  </head>
+  <body>
+    <div class="card">
+      <p class="text-heading-h1 display-flex justify-center">
+        Aleady clicked to this one
+      </p>
+
+      <div style="height: 32px"></div>
+
+      <div class="display-flex align-center" style="flex-direction: column">
+        <div class="already-clicked-img"></div>
+        <div style="height: 16px"></div>
+
+        <div class="display-flex">
+          <p class="text-heading-h3">Only</p>
+          <p
+            class="text-heading-h3"
+            style="
+              color: var(--primary-500);
+              margin-left: 5px;
+              margin-right: 5px;
+            "
+          >
+            3
+          </p>
+          <p class="text-heading-h3">clicks to go!</p>
+        </div>
+      </div>
+
+      <div style="height: 32px"></div>
+
+      <div class="list-container display-flex">
+        <div class="left">
+          <numberic-label numberic="1" content="ok" status="loading"></numberic-label>> </numberic-label>
+          <numberic-label
+            numberic="2"
+            content="Lorem ipsum dolor sit amet consectetural al. Elit nisl ipsum dui eu quam neque turpis convallis. In in at eget ac vitae tincidunt. Neque ut laoreet in id. Ullamcorper at ipsum sit facilisis fermentum."
+          >
+          </numberic-label>
+          <numberic-label numberic="3" content="ok" status="loading">
+          </numberic-label>
+          <numberic-label numberic="4" content="ok"> </numberic-label>
+          <numberic-label numberic="5" content="ok"> </numberic-label>
+          <numberic-label numberic="6" content="ok"> </numberic-label>
+          <numberic-label numberic="7" content="ok"> </numberic-label>
+          <numberic-label numberic="8" content="ok"> </numberic-label>
+        </div>
+
+        <div class="right">
+          <numberic-label numberic="9" content="ok"> </numberic-label>
+          <numberic-label
+            numberic="10"
+            content="Lorem ipsum dolor sit amet consectetural al."
+          >
+          </numberic-label>
+          <numberic-label numberic="11" content="ok"> </numberic-label>
+          <numberic-label numberic="12" content="ok"> </numberic-label>
+          <numberic-label numberic="13" content="ok"> </numberic-label>
+          <numberic-label numberic="14" content="ok"> </numberic-label>
+          <numberic-label numberic="15" content="ok"> </numberic-label>
+          <numberic-label numberic="16" content="ok"> </numberic-label>
+        </div>
+      </div>
+
+      <div style="height: 32px"></div>
+
+      <secure-by></secure-by>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,430 @@
+main.sign_in {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  padding: 20px;
+}
+
+main.sign_in .background,
+main.sign_in .background_responsive_1,
+main.sign_in .background_responsive_2,
+main.sign_in .background_1,
+main.sign_in .background_2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: 1s ease;
+} 
+
+main.sign_in .background {
+  background-image: url('../../assets/background.jpg');
+} 
+
+main.sign_in .background_responsive_1 {
+  background-image: url('../../assets/background_responsive_1.jpg');
+}
+
+main.sign_in .background_responsive_2 {
+  background-image: url('../../assets/background_responsive_2.jpg');
+}
+
+main.sign_in .background_1 {
+  background-image: url('../../assets/background_1.jpg');
+  display: none;
+}
+
+main.sign_in .background_2 {
+  background-image: url('../../assets/background_2.jpg');
+  display: none;
+}
+
+main.sign_in .background.active,
+main.sign_in .background_responsive_1.active,
+main.sign_in .background_responsive_2.active,
+main.sign_in .background_1.active,
+main.sign_in .background_2.active {
+  opacity: 1;
+  transition: 1s ease;
+}
+
+main.sign_in .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  box-sizing: border-box;
+  padding: 20px;
+  gap: 10%;
+  padding-top: 12.5vh;
+}
+
+main.sign_in .content .logo {
+  width: 15vh;
+  height: 15vh;
+  flex-shrink: 0;
+  /* width: min(14vh, 140px);
+  height: min(14vh, 140px);
+  min-width: 120px;
+  min-height: 120px; */
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+main.sign_in .content .logo .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(53, 53, 53, 0.2);
+}
+
+main.sign_in .content .logo .img_container{
+  width: 85%;
+  height: 85%;
+  background-color: var(--white);
+  z-index: 1;
+  border-radius: 50%;
+}
+
+
+main.sign_in .content .form {
+  width: 100%;
+  height: 70%; 
+  background-color: var(--white);
+  z-index: 1;
+  border-radius: 16px;
+  box-sizing: border-box;
+  padding: 40px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main.sign_in .content .form .title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 17%;
+  max-height: 80px;
+}
+
+main.sign_in .content .form .title h1 {
+  margin: 0;
+  font-family: var(--app-font);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  color: var(--gray-900);
+  text-align: center;
+}
+
+main.sign_in .content .form .title .subtitle {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+main.sign_in .content .form .title .subtitle p {
+  margin: 0;
+  font-family: var(--app-font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--gray-700);
+  text-align: center;
+}
+
+main.sign_in .content .form .title .subtitle span {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+main.sign_in .content .form .title .subtitle .info_icon {
+  width: 18px;
+  height: 18px;
+  filter: invert(73%) sepia(8%) saturate(26%) hue-rotate(201deg) brightness(88%) contrast(86%);
+}
+
+main.sign_in .content .form .inputs {
+  width: 100%;
+  height: 65%;
+  max-height: 240px;
+  /* gap: 24px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+main.sign_in .content .form .inputs custom-input {
+  width: 100%;
+}
+
+main.sign_in .content .form .inputs p {
+  width: 100%;
+  margin: 0;
+  font-family: var(--app-font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--gray-700);
+  text-align: right;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+main.sign_in .content .form .inputs .sign_in-button {
+  width: 100%;
+  background-color: var(--primary-500);
+  border-radius: 30px;
+  height: 52px;
+  padding: 16px 24px;
+  box-sizing: border-box;
+  transition: 0.3s ease-out;
+  cursor: pointer;
+}
+
+main.sign_in .content .form .inputs .sign_in-button.processing {
+  cursor: default;
+}
+
+main.sign_in .content .form .inputs .sign_in-button .default {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+main.sign_in .content .form .inputs .sign_in-button .default .text {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-family: var(--app-font);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--white);
+  text-decoration: none;
+  grid-row: 1;
+  transition: 0.3s ease-out;
+  grid-column: 1;
+}
+
+main.sign_in .content .form .inputs .sign_in-button .default .arrow {
+  position: absolute;
+  top: calc(50% - 12px);
+  left: calc(50% - 12px);
+  width: 24px;
+  height: 24px;
+  filter: invert(100%);
+  transition: 0.3s ease-out;
+  opacity: 0;
+}
+
+main.sign_in .content .form .inputs .sign_in-button:hover {
+  background-color: var(--primary-700);
+  transition: 0.3s ease-out;
+}
+
+main.sign_in .content .form .inputs .sign_in-button:hover .default .text {
+  transition: 0.3s ease-out;
+  transform: translateX(-10px);
+}
+
+main.sign_in .content .form .inputs .sign_in-button:hover .default .arrow {
+  opacity: 1;
+  transition: 0.3s ease-out;
+  transform: translateX(30px);
+}
+
+main.sign_in .content .form .inputs .sign_in-button .processing {
+  display: none;
+}
+
+main.sign_in .content .form .inputs .sign_in-button.processing {
+  background-color: var(--primary-400);
+}
+
+main.sign_in .content .form .inputs .sign_in-button.processing .default {
+  display: none;
+}
+
+main.sign_in .content .form .inputs .sign_in-button.processing .processing {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+main.sign_in .content .form .inputs .sign_in-button.processing .processing .text {
+  text-align: center;
+  font-family: var(--app-font);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--white);
+  text-decoration: none;
+  cursor: default;
+  width: auto;
+}
+
+main.sign_in .content .form .inputs .sign_in-button.processing .processing .dot-processing {
+  display: flex;
+  gap: 4px;
+  align-items: end;
+  height: 10px;
+}
+
+main.sign_in .dot-1, main.sign_in .dot-2, main.sign_in .dot-3 {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  opacity: 0.4;
+  background-color: var(--white);
+}
+
+main.sign_in .dot-1 {
+  animation: dot-move 4s infinite;
+}
+
+main.sign_in .dot-2 {
+  animation: dot-move 4s infinite;
+  animation-delay: 1s;
+}
+
+main.sign_in .dot-3 {
+  animation: dot-move 4s infinite;
+  animation-delay: 2s;
+}
+
+@keyframes dot-move {
+  0% {
+    transform: translateY(0px);
+    opacity: 0.4
+  }
+
+  10% {
+    transform: translateY(-10px);
+    opacity: 1
+  }
+
+  20% {
+    transform: translateY(0px);
+    opacity: 0.4
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 0.4
+  }
+}
+
+main.sign_in .content .form .setting_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+main.sign_in .content .form .setting_text p {
+  font-family: var(--app-font);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--gray-700);
+  margin: 0;
+}
+
+main.sign_in .content .form .setting_text .icon {
+  filter: invert(36%) sepia(5%) saturate(82%) hue-rotate(202deg) brightness(93%) contrast(87%);
+}
+
+main.sign_in .content .form .secure_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+main.sign_in .content .form .secure_text p {
+  font-family: var(--app-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--gray-700);
+  margin: 0;
+}
+
+main.sign_in .content .form .secure_text .info_icon {
+  width: 16px;
+  height: 16px;
+  filter: invert(79%) sepia(5%) saturate(44%) hue-rotate(202deg) brightness(83%) contrast(81%);
+}
+
+main.sign_in .content .form .secure_text .tide_logo {
+  width: 57px;
+  height: 24px;
+}
+
+@media (min-width: 899px) {
+  main.sign_in .content {
+    flex-direction: row;
+    padding: 20px;
+    padding-left: 25vw;
+    gap: 15vw;
+    
+  }
+
+  main.sign_in .background_responsive_1,
+  main.sign_in .background_responsive_2 {
+    display: none;
+  }
+
+  main.sign_in .background_1,
+  main.sign_in .background_2 {
+    display: initial;
+  }
+
+  main.sign_in .content .form {
+    max-width: 480px;
+    max-height: 570px;
+    width: 50%;
+    min-height: 500px;
+  }
+
+  main.sign_in .content .logo {
+    width: 13vw;
+    height: 13vw;
+    max-width: 258px;
+    max-height: 258px;
+    flex-shrink: 0;
+  }
+
+  main.sign_in .content .form .inputs {
+    height: 50%;
+  }
+}

@@ -175,7 +175,7 @@ class CustomCheckbox extends HTMLElement {
     if (this.hasAttribute("state")) {
       this.container.classList.add(this.getAttribute('state'));
     } else {
-      this.container.classList.add('default');
+      this.container.classList.add('unchecked');
     }
 
     if (this.hasAttribute("disabled")) {

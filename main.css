@@ -1,6 +1,20 @@
 @import "./style_guide/app_color.css";
 @import "./style_guide/app_typography.css";
 
+@import "./page/sign-in/sign-in.css";
+@import "./page/forgot-password/forgot-password.css";
+
+:root,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 .tooltip-container {
   background-color: var(--gray-100);
   padding: 16px;
@@ -13,4 +27,52 @@
 
 :root .helper-list {
   margin: 0 0 12px 0;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.justify-center,
+.card {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.align-center,
+.card {
+  align-items: center;
+}
+
+.card {
+  align-items: center;
+  width: 100%;
+  max-width: 592px;
+  padding: 48px 24px 24px 24px;
+  box-sizing: border-box;
+  gap: 32px;
+  box-shadow: 0px 16px 32px -4px #1018280a;
+  border-radius: 16px;
+  background-color: var(--white);
+}
+
+.hover-effect {
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s ease; /* Add transition effect */
+}
+
+.divider {
+  border: 1px solid var(--gray-50);
+  width: 100%;
+}
+
+.spacer {
+  height: 100%;
+}
+
+a {
+  color: var(--gray-700);
 }

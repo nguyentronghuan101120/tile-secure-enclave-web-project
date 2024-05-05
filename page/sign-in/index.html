@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Sign In</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="../../main.css" />
+    <script defer src="../../components/tooltip/index.js"></script>
+    <script defer src="../../components/input/index.js"></script>
+    <script defer src="./sign-in.js"></script>
+    <script defer src="./router.js"></script>
+  </head>
+  <body>
+    <main class="sign_in">
+      <div class="background active"></div>
+      <div class="background_responsive_1"></div>
+      <div class="background_responsive_2"></div>
+      <div class="background_1"></div>
+      <div class="background_2"></div>
+
+      <div class="content">
+        <div class="logo">
+          <div class="overlay"></div>
+          <div class="img_container"></div>
+        </div>
+        <div class="form">
+          <div class="title">
+            <h1>Sign yourself in</h1>
+            <div class="subtitle">
+              <p class="text">
+                New user? <span id="sign-up-nav">Create an account</span>
+              </p>
+              <custom-tooltip text="Account" postion="bottom">
+                <img
+                  class="info_icon"
+                  src="../../assets/icons/information_circle_contained.svg"
+                  alt="info_icon"
+                />
+              </custom-tooltip>
+            </div>
+          </div>
+
+          <div class="inputs">
+            <custom-input
+              id="sign_in-input_name"
+              type="text"
+              label="Field Name"
+              tt-text="Field Name"
+              tt-position="top"
+            ></custom-input>
+            <custom-input
+              id="sign_in-input_password"
+              type="password"
+              label="Password"
+              tt-text="Password"
+              tt-position="top"
+            ></custom-input>
+            <p id="forgot-password-nav">Forgot password?</p>
+            <div class="sign_in-button">
+              <div class="default">
+                <p class="text">Sign In</p>
+                <img
+                  class="arrow"
+                  src="../../assets/icons/arrow_right.svg"
+                  alt="arrow_right"
+                />
+              </div>
+              <div class="processing">
+                <p class="text">Processing</p>
+                <div class="dot-processing">
+                  <span class="dot-1"></span>
+                  <span class="dot-2"></span>
+                  <span class="dot-3"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="setting_text hover-effect" id="setting-nav">
+            <img
+              class="icon"
+              src="../../assets/icons/shielded_gear.svg"
+              alt="gear_icon"
+            />
+            <p>Settings</p>
+            <img
+              class="icon"
+              src="../../assets/icons/arrow_down.svg"
+              alt="arrow_down_icon"
+            />
+          </div>
+
+          <div class="secure_text">
+            <p>Secured by</p>
+            <img
+              class="tide_logo"
+              src="../../assets/icons/tide_logo.svg"
+              alt="tide_logo"
+            />
+            <custom-tooltip text="Account" postion="bottom">
+              <img
+                class="info_icon"
+                src="../../assets/icons/information_circle_contained.svg"
+                alt="info_icon"
+              />
+            </custom-tooltip>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

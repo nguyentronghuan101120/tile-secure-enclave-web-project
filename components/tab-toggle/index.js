@@ -1,12 +1,20 @@
 class CustomTabToggle extends HTMLElement {
   static get observedAttributes() {
-    return ['content1', 'src1', 'content2', 'src2', 'id', 'state', 'background-color'];
+    return [
+      "content1",
+      "src1",
+      "content2",
+      "src2",
+      "id",
+      "state",
+      "background-color",
+    ];
   }
 
   constructor() {
     super();
-  
-    const template = document.createElement('template');
+
+    const template = document.createElement("template");
     template.innerHTML = `
     <style>
       .custom-tab-toggle {
@@ -20,6 +28,7 @@ class CustomTabToggle extends HTMLElement {
         box-sizing: border-box;
         position: relative;
         transition: 0.5s ease;
+        
       }
 
       .custom-tab-toggle > * {
@@ -106,36 +115,44 @@ class CustomTabToggle extends HTMLElement {
     </div>
     `;
 
-    this._shadowRoot = this.attachShadow({ mode: 'open' });
+    this._shadowRoot = this.attachShadow({ mode: "open" });
     this._shadowRoot.appendChild(template.content.cloneNode(true));
 
-    this.container = this._shadowRoot.querySelector('.custom-tab-toggle');
+    this.container = this._shadowRoot.querySelector(".custom-tab-toggle");
 
-    this.tab1 = this._shadowRoot.querySelector('.custom-tab-toggle .tab1');
-    this.img_holder1 = this._shadowRoot.querySelector('.custom-tab-toggle .tab1 .img-holder');
-    this.content1 = this._shadowRoot.querySelector('.custom-tab-toggle .tab1 .content');
+    this.tab1 = this._shadowRoot.querySelector(".custom-tab-toggle .tab1");
+    this.img_holder1 = this._shadowRoot.querySelector(
+      ".custom-tab-toggle .tab1 .img-holder"
+    );
+    this.content1 = this._shadowRoot.querySelector(
+      ".custom-tab-toggle .tab1 .content"
+    );
 
-    this.tab2 = this._shadowRoot.querySelector('.custom-tab-toggle .tab2');
-    this.img_holder2 = this._shadowRoot.querySelector('.custom-tab-toggle .tab2 .img-holder');
-    this.content2 = this._shadowRoot.querySelector('.custom-tab-toggle .tab2 .content');
+    this.tab2 = this._shadowRoot.querySelector(".custom-tab-toggle .tab2");
+    this.img_holder2 = this._shadowRoot.querySelector(
+      ".custom-tab-toggle .tab2 .img-holder"
+    );
+    this.content2 = this._shadowRoot.querySelector(
+      ".custom-tab-toggle .tab2 .content"
+    );
 
-    this.slider = this._shadowRoot.querySelector('.custom-tab-toggle .slider');
+    this.slider = this._shadowRoot.querySelector(".custom-tab-toggle .slider");
 
-    const img1 = document.createElement('img');
-    img1.setAttribute('src', this.getAttribute("src1"));
-    img1.classList.add('icon');
+    const img1 = document.createElement("img");
+    img1.setAttribute("src", this.getAttribute("src1"));
+    img1.classList.add("icon");
     this.img_holder1.appendChild(img1);
 
-    const img2 = document.createElement('img');
-    img2.setAttribute('src', this.getAttribute("src2"));
-    img2.classList.add('icon');
+    const img2 = document.createElement("img");
+    img2.setAttribute("src", this.getAttribute("src2"));
+    img2.classList.add("icon");
     this.img_holder2.appendChild(img2);
   }
 
   connectedCallback() {
     this.tab1.addEventListener("click", this.changeToState1.bind(this));
     this.tab2.addEventListener("click", this.changeToState2.bind(this));
-    this.render()
+    this.render();
   }
 
   disconnectedCallback() {
@@ -145,34 +162,35 @@ class CustomTabToggle extends HTMLElement {
 
   attributeChangedCallback(name, oldValue, newValue) {
     if (oldValue !== newValue) {
-      if (name === 'id') {
-        this.container.setAttribute('id', newValue);
+      if (name === "id") {
+        this.container.setAttribute("id", newValue);
       }
       this.render();
     }
   }
 
   changeToState1() {
-    this.container.classList.add('state1')
-    this.container.classList.remove('state2')
+    this.container.classList.add("state1");
+    this.container.classList.remove("state2");
   }
 
   changeToState2() {
-    this.container.classList.add('state2')
-    this.container.classList.remove('state1')
+    this.container.classList.add("state2");
+    this.container.classList.remove("state1");
   }
 
   render() {
-    this.content1.textContent = this.getAttribute('content1') || '';
-    this.content2.textContent = this.getAttribute('content2') || '';
-    this.container.classList.add(this.getAttribute('state'))
+    this.content1.textContent = this.getAttribute("content1") || "";
+    this.content2.textContent = this.getAttribute("content2") || "";
+    this.container.classList.add(this.getAttribute("state"));
 
     if (this.hasAttribute("background-color")) {
-      this.container.style.backgroundColor = this.getAttribute("background-color");
+      this.container.style.backgroundColor =
+        this.getAttribute("background-color");
     } else {
-      this.container.style.backgroundColor = "var(--gray-50)"
+      this.container.style.backgroundColor = "var(--gray-50)";
     }
   }
 }
 
-customElements.define('custom-tab-toggle', CustomTabToggle);
+customElements.define("custom-tab-toggle", CustomTabToggle);

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="../../components/list-tile/index.js"></script>
+    <script defer src="../../components/secure-by/index.js"></script>
+    <script defer src="../../components/activity/index.js"></script>
+    <script defer src="index.js"></script>
+    <script defer src="router.js"></script>
+  </head>
+  <body>
+    <div class="card">
+      <div
+        class="display-flex hover-effect"
+        id="back-button-nav"
+        style="width: 60px"
+      >
+        <div class="back-button"></div>
+        <p class="text-l-regular-underline text-color-gray-700">Back</p>
+      </div>
+
+      <div style="height: 16px"></div>
+
+      <p class="text-heading-h1 display-flex justify-center">
+        Your account setting
+      </p>
+
+      <div style="height: 16px"></div>
+
+      <list-tile
+        leading-icon-src="../../assets/icons/activity-icon.svg"
+        label="View account activity log"
+        id="account-activity-nav"
+      ></list-tile>
+
+      <div style="height: 8px"></div>
+
+      <list-tile
+        leading-icon-src="../../assets/icons/update-password-icon.svg"
+        label="Update password"
+      ></list-tile>
+
+      <div style="height: 8px"></div>
+
+      <list-tile
+        leading-icon-src="../../assets/icons/person-icon.svg"
+        label="Change username"
+      ></list-tile>
+
+      <div style="height: 8px"></div>
+
+      <list-tile
+        leading-icon-src="../../assets/icons/mail-icon.svg"
+        label="Recovery emails"
+      ></list-tile>
+
+      <div style="height: 8px"></div>
+
+      <list-tile
+        leading-icon-src="../../assets/icons/server-node-icon.svg"
+        label="Manage server nodes"
+      ></list-tile>
+
+      <div style="height: 8px"></div>
+
+      <list-tile
+        leading-icon-src="../../assets/icons/settings-icon.svg"
+        label="Other settings"
+      ></list-tile>
+
+      <div style="height: 32px"></div>
+      <secure-by></secure-by>
+    </div>
+  </body>
+</html>
